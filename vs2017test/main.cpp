@@ -184,7 +184,7 @@ void BFSIteration()
 	Cell* currentFromStart, * currentFromTarget;
 	int start_curr_row, start_curr_col, target_curr_row, target_curr_col;
 
-	if (startGrays.empty()) // no more grays....no solution
+	if (startGrays.empty() || targetGrays.empty()) // no more grays....no solution
 	{
 		cout << "no more grays....no solution\n";
 		bfs_is_on = false;
@@ -278,7 +278,7 @@ void main(int argc, char* argv[])
 	glutIdleFunc(idle);
 	// menu
 	glutCreateMenu(menu);
-	glutAddMenuEntry("BFS", 1);
+	glutAddMenuEntry("Bidirectional Search", 1);
 	glutAddMenuEntry("DFS", 2);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 
