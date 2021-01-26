@@ -99,10 +99,10 @@ void DrawMaze()
 			switch (maze[i][j])
 			{
 			case SPACE:
-				glColor3d(1, 1, 1);   // white
+				glColor3d(0.7, 0.85, 0.9);   // white
 				break;
 			case WALL:
-				glColor3d(0.7, 0.4, 0);   // dark-orange
+				glColor3d(0.0, 0.0, 0);   // dark-orange
 				break;
 			case START:
 				glColor3d(0, 1, 1);   // cyan
@@ -266,7 +266,11 @@ void menu(int choice)
 	case 1: // BFS
 		bfs_is_on = true;
 		break;
-	case 2: // DFS
+	case 2: // new maze
+		bfs_is_on = false;
+		startGrays.clear();
+		targetGrays.clear();
+		init();
 		break;
 	}
 }
@@ -285,7 +289,7 @@ void main(int argc, char* argv[])
 	// menu
 	glutCreateMenu(menu);
 	glutAddMenuEntry("Bidirectional Search", 1);
-	glutAddMenuEntry("DFS", 2);
+	glutAddMenuEntry("New Maze", 2);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 
 	glutMainLoop();

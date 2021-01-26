@@ -23,6 +23,7 @@
     <ProjectGuid>{77A8D31A-5446-46A6-8336-F96FF437BC18}</ProjectGuid>
     <RootNamespace>vs2017test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Bidirectional BFS</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
